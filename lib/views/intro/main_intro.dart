@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foode/views/home/home.dart';
+import 'package:foode/views/intro/intro/intro.dart';
+import 'package:get/get.dart';
 
 class MainIntroScreen extends StatefulWidget {
   const MainIntroScreen({super.key});
@@ -14,20 +15,17 @@ class _MainIntroScreenState extends State<MainIntroScreen> {
     Future.delayed(
       const Duration(seconds: 5),
     ).then(
-            (value) => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ),
-        ),);
+      (value) => Get.offAll(() => IntroScreen()),
+    );
     super.didChangeDependencies();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: Image.asset(
