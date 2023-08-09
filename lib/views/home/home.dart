@@ -16,25 +16,38 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(radius: 28),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Diver to",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 20,
+            Row(
+              children: [
+                CircleAvatar(
+                    radius: 28,
+                    child: ClipOval(
+                      child: Image.asset(
+                        "assets/home/img.png",
+                        width: 60,
+                        height: 60,
+                        fit: BoxFit.cover,
+                      ),
+                    )),
+                SizedBox(
+                  width: 12,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Diver to",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 18,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "Times Square",
-                    style: TextStyle(color: Colors.black, fontSize: 22),
-                  ),
-                ],
-              ),
+                    Text(
+                      "Times Square",
+                      style: TextStyle(color: Colors.black, fontSize: 21),
+                    ),
+                  ],
+                ),
+              ],
             ),
             Row(
               children: [
@@ -118,28 +131,38 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(40),
                     color: Colors.green[400]),
                 child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "30%",
-                        style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.w900),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "30%",
+                              style: TextStyle(
+                                  fontSize: 50,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900),
+                            ),
+                            Text(
+                              "DISCOUNT ONLY",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,),
+                            ),
+                            Text(
+                              "VALID FOR TODAY!",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900),
+                            ),
+                          ],
+                        ),
                       ),
-                      Text(
-                        "DISCOUNT ONLY",
-                        style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w900),
-                      ),
-                      Text(
-                        "VALID FOR TODAY!",
-                        style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w900),
-                      ),
-                    ],
-                  ),
-                ]),
+                      Expanded(child: Image(image: AssetImage("assets/home/img_1.png"),))]),
               ),
             )
           ],
