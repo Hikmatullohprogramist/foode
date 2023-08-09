@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foode/views/intro/main_intro.dart';
-import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -42,10 +41,10 @@ class _SplashScreenState extends State<SplashScreen> {
           const SizedBox(
             height: 150,
           ),
-          Lottie.asset(
-            "assets/animations/loading.json",
-            width: 100,
-          ),
+          // Lottie.asset(
+          //   "assets/animations/loading.json",
+          //   width: 100,
+          // ),
         ],
       ),
     );
